@@ -6,6 +6,9 @@ import 'package:nasa_clean_architecture_null_safety/features/domain/entities/spa
 import 'package:nasa_clean_architecture_null_safety/features/domain/repositories/space_media_repository.dart';
 import 'package:nasa_clean_architecture_null_safety/features/domain/usecases/get_space_media_from_date_usecase.dart';
 
+import '../../../mocks/date_mock.dart';
+import '../../../mocks/space_media_entity_mock.dart';
+
 class MockSpaceMediaRepository extends Mock implements ISpaceMediaRepository {}
 
 void main() {
@@ -15,14 +18,6 @@ void main() {
     repository = MockSpaceMediaRepository();
     usecase = GetSpaceMediaFromDateUsecase(repository);
   });
-
-  const tSpaceMedia = SpaceMediaEntity(
-      description: 'Description for testing purposes.',
-      mediaType: 'image',
-      title: 'Testing Title',
-      mediaUrl: 'https://mockurl.com/image.jpg');
-
-  final tDate = DateTime(2021, 02, 26);
 
   test('Should get space media entity for a given date from the repository.',
       () async {
