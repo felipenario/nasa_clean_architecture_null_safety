@@ -8,10 +8,10 @@ import 'package:nasa_clean_architecture_null_safety/features/infra/datasources/e
 import 'package:nasa_clean_architecture_null_safety/features/infra/datasources/space_media_datasource.dart';
 import 'package:nasa_clean_architecture_null_safety/features/infra/models/space_media_model.dart';
 
-class NasaDatasourceImplementation implements ISpaceMediaDatasource {
+class SpaceMediaDatasouceImplementation implements ISpaceMediaDatasource {
   final HttpClient client;
 
-  NasaDatasourceImplementation(this.client);
+  SpaceMediaDatasouceImplementation(this.client);
 
   @override
   Future<SpaceMediaModel> getSpaceMediaFromDate(DateTime date) async {

@@ -39,6 +39,9 @@ dependencies:
   mocktail: ^0.2.0
   http: ^0.13.4
   flutter_triple: ^1.2.5
+  shimmer: ^2.0.0
+  flutter_modular: ^4.2.0
+  youtube_player_iframe: ^2.2.2
 
 dev_dependencies:
   flutter_test:

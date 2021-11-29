@@ -15,7 +15,7 @@ void main() {
   late HttpClient client;
   setUp(() {
     client = HttpClientMock();
-    datasource = NasaDatasourceImplementation(client);
+    datasource = SpaceMediaDatasouceImplementation(client);
   });
   final tDateTime = DateTime(2021, 11, 27);
   const expectedUrl =
